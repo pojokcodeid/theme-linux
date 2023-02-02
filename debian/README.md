@@ -39,3 +39,8 @@ sudo cp -r Tokyonight-darker/ /usr/share/themes/
 sudo cp -r Tokyonight-icon/  /usr/share/icons/
 ```
 3. Setting Tweek
+
+# Fedora Beda Installnya Saja (dnf) bukan (apt-get)
+```
+sudo dnf install gnome-tweaks 
+```
