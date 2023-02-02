@@ -30,3 +30,11 @@ sudo visudo
 [nama user] ALL=(ALL:ALL) ALL
 [nama user] ALL=(ALL) NOPASSWD:ALL
 ```
+5. Restart WSL
+```
+wsl --shutdown
+```
+6. Install clear 
+```
+sudo dnf install ncurses
+```
