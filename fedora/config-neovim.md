@@ -66,3 +66,7 @@ export PATH=/home/asep/nvim/bin:$PATH
 sudo dnf install gcc
 sudo dnf install g++
 ```
+# Clone config Neovim
+```
+git clone https://github.com/pojokcodeid/nvim-lazy.git ~/.config/nvim
+```
