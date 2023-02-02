@@ -42,3 +42,7 @@ ctrl + x
 y
 enter
 ```
+# Install git 
+```
+sudo dnf install git
+```
