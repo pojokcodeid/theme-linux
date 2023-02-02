@@ -14,7 +14,7 @@ https://draculatheme.com/gtk
 ```
 sudo apt install gnome-tweak-tool
 ```
-2. Download dan install theme dari link 
+2. Download dan install theme dari link <br>
 https://www.gnome-look.org/p/1267246/  <br>
 https://www.gnome-look.org/p/1733012/   <br>
 https://imgur.com/SBKjnxm  <br>
@@ -30,7 +30,7 @@ sudo cp -r Nordic-icon/  /usr/share/icons/
 ```
 sudo apt install gnome-tweak-tool
 ```
-2. Download dari link berikut
+2. Download dari link berikut <br>
 https://www.gnome-look.org/p/1681315 <br>
 https://www.gnome-look.org/p/1681475 <br>
 
