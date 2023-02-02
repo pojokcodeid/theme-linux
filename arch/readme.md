@@ -1,4 +1,7 @@
 ```
+archinstall
+```
+```
 sudo pacman -S git
 sudo pacman -Sy nodejs
 sudo pacman -S npm
