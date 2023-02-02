@@ -46,3 +46,23 @@ enter
 ```
 sudo dnf install git
 ```
+#Install Neovim
+1. download neovim
+```
+cd download
+wget https://github.com/neovim/neovim/releases/download/v0.8.2/nvim-linux64.tar.gz
+tar -xf nvim-linux64.tar.gz
+mv nvim-linux64 nvim
+cp -r nvim /home/asep/
+```
+2. register path
+```
+cd ../
+nano .bashrc
+export PATH=/home/asep/nvim/bin:$PATH
+```
+# Install GCC dan G++
+```
+sudo dnf install gcc
+sudo dnf install g++
+```
