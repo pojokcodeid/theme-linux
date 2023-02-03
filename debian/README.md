@@ -46,7 +46,7 @@ sudo dnf install gnome-tweaks
 ```
 ## Custom Menu
 1. buka tweaks dan activekan minimize dan resize 
-``
+```
 tweaks -> windows titlebars  -> maximize dan minimize di ceklis
 ```
 2. Gnome Extension
