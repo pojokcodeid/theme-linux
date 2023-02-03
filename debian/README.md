@@ -44,3 +44,20 @@ sudo cp -r Tokyonight-icon/  /usr/share/icons/
 ```
 sudo dnf install gnome-tweaks 
 ```
+## Custom Menu
+1. buka tweaks dan activekan minimize dan resize 
+``
+tweaks -> windows titlebars  -> maximize dan minimize di ceklis
+```
+2. Gnome Extension
+- buka browser https://extensions.gnome.org/
+- install extensi browser 
+- cari user themes dan activekan
+- dash to panel  di on kan dan install 
+- Desktop Icons NG  di on kan dan install
+3. Lakukan panel setting 
+- klik kanan pada panel dibawah dan setting sesuai keinginan
+- non activekan default docing
+
+
+
