@@ -16,6 +16,7 @@ wget https://nodejs.org/dist/v18.13.0/node-v18.13.0-linux-x64.tar.xz
 ```
 sudo dnf install unzip
 sudo dnf install xz
+sudo apt install xz-utils
 ```
 5. Extrak file downloadan 
 ```
