@@ -2,7 +2,7 @@
 1. Kita harus sudah ada wsl lain yang terinstall 
 2. Download ISO stable 
 - download ambil dari sini : https://mirrors.edge.kernel.org/archlinux/iso/latest/
-```
+```bash
 sudo aot-get install wget 
 mkdir download
 cd download
@@ -23,11 +23,11 @@ sudo vim etc/pacman.d/mirrorlist
 sudo tar -czvf root.tar.gz *
 ```
 5. copy ke local dir windows 
-```
+```bash
 sudo mv root.tar.gz /mnt/c/Users/USERNAME/Download/root.tar.gz
 ```
 6. Sekarang buka powershellnya
-```
+```bash
 wsl --import arch $HOME\wsl\arch C:\Users\Asep\Downloads\root.tar.gz
 wsl -d arch
 
@@ -37,7 +37,7 @@ pacman-key --populate archlinux
 pacman -Syyu base base-devel git vim wget reflector fish
 ```
 7. Enable multilib
-```
+```bash
 linenumber=$(grep -nr "\\#\\[multilib\\]" /etc/pacman.conf | gawk '{print $1}' FS=":")
 sed -i "${linenumber}s:.*:[multilib]:" /etc/pacman.conf
 linenumber=$((linenumber+1))
@@ -52,13 +52,13 @@ pacman -Syy
 passwd
 ```
 10. add user baru 
-```
+```bash
 useradd -m -G wheel -s /bin/fish -d /home/username username
 passwd username
 sed -i '/%wheel ALL=(ALL) ALL/c\%wheel ALL=(ALL) ALL'  /etc/sudoers
 ```
 11. Edit Arch locale and regenerate.
-```
+```bash
 sed -i 's:#en_US.UTF-8 UTF-8:en_US.UTF-8 UTF-8:g' /etc/locale.gen
 locale-gen
 echo LANG=en_US.UTF-8 >> /etc/locale.conf
@@ -66,7 +66,7 @@ echo LANGUAGE=en_US.UTF-8 >> /etc/locale.conf
 echo LC_ALL=en_US.UTF-8 >> /etc/locale.confS
 ```
 12. update root acess
-```
+```bash
 pacman -Syyu vi
 sudo visudo 
 
@@ -74,10 +74,10 @@ sudo visudo
 [nama user] ALL=(ALL) NOPASSWD:ALL
 ```
 13. Create the wsl.conf file on the system.
-```
+```bash
 vim /etc/wsl.conf
 ```
-```
+```bash
 [automount]
 enabled = true
 options = "metadata,uid=1000,gid=1000,umask=22,fmask=11,case=off"
@@ -101,7 +101,7 @@ wndows + r
 wsl --shutdown
 ```
 15. Buka lagi arch
-```
+```bash
 mkdir ~/yay 
 cd ~/yay
 wget "https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=yay" --output-document=./PKGBUILD
@@ -112,10 +112,10 @@ makepkg -si
 yay -S daemonize
 ```
 17. Create a startup script daemonize systemd as PID 1.
-```
+```bash
 vim /etc/profile.d/00-wsl2-systemd.sh
 ```
-```
+```bash
 SYSTEMD_PID=$(ps -ef | grep '/lib/systemd/systemd --system-unit=basic.target$' | grep -v unshare | awk '{print $2}')
 
 if [ -z "$SYSTEMD_PID" ]; then
